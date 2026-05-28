@@ -72,7 +72,7 @@
 
   .nav-links {
     position: fixed;
-    top: 56px;
+    top: 0;
     left: 0;
     right: 0;
     background: $bg-secondary;
@@ -85,7 +85,7 @@
     transition: transform 0.3s ease;
     z-index: 99;
 
-    &.open { transform: translateY(0); }
+    &.open { transform: translateY(56px); }
 
     a {
       width: 100%;
