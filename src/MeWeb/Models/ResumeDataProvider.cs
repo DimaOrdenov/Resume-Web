@@ -18,13 +18,14 @@ public class ResumeDataProvider
             "Senior .NET Engineer and Team Lead with 8+ years of experience, having grown from individual contributor to leading a cross-functional mobile team at Artec 3D. Deep technical expertise in C#, .NET iOS/Android, and full-stack development – from native hardware integration and 3D rendering to REST API design, database management, and CI/CD infrastructure. As a team lead, define architectural standards, mentor engineers, own delivery pipelines, and ship under tight deadlines. Regularly build full-stack solutions at hackathons (Blazor WASM, .NET Core, PostgreSQL, Docker), combining hands-on engineering with a product mindset.",
             Skills:
             [
-                new ("Programming Languages", ["C#", "HTML/CSS", "Kotlin/Java", "Swift", "Python"]),
+                new ("Programming languages", ["C#", "HTML/CSS", "Kotlin/Java", "Swift", "Python"]),
                 new ("Mobile", [".NET iOS/Android", "ReactiveUI", "Firebase", "Filament", "SceneKit", "Polly"]),
                 new ("Backend / Web", [".NET Core", "ASP.NET Core", "Blazor WASM", "REST API", "SignalR", "Serilog", "Swagger / OpenAPI"]),
                 new ("Databases", ["EF Core", "PostgreSQL", "MSSQL", "SQLite", "MySQL", "Redis"]),
                 new ("Tests", ["XUnit", "Moq", "Integration Tests"]),
-                new ("DevOps / Tools", ["Docker", "Jenkins", "GitHub Actions", "Bitbucket Pipelines", "Jira", "Figma"]),
-                new ("Architecture", ["MVVM", "MVC", "Clean Architecture", "Repository Pattern", "SOLID", "DI"]),
+                new ("DevOps", ["Docker", "Jenkins", "GitHub Actions", "Bitbucket Pipelines", "CI/CD"]),
+                new ("Project management", ["Jira", "Confluence", "Figma", "UML diagrams", "Other illustration tools"]),
+                new ("Architecture", ["MVVM", "MVC", "Rx", "Clean Architecture", "SOLID", "DI"]),
             ],
             Experiences:
             [
@@ -72,6 +73,11 @@ public class ResumeDataProvider
                         "Built .NET Core REST APIs and managed MSSQL databases for backend services.",
                         "Created Windows background services for data synchronization; initiated a candidate onboarding app.",
                         "Stack: .NET, C#, MSSQL.",
+                    ],
+                    AppLinks:
+                    [
+                        new ("Our MTS", "https://apps.apple.com/ru/app/%D0%BD%D0%B0%D1%88-%D0%BC%D1%82%D1%81/id1555264079", "ios"),
+                        new ("Our MTS", "https://play.google.com/store/apps/details?id=ru.mts.ourmts&hl=ru&pli=1", "android"),
                     ]
                 ),
                 new (
@@ -84,6 +90,11 @@ public class ResumeDataProvider
                         "Built the company's first mobile app from scratch (.NET mobile): auth, order tracking, route mapping.",
                         "Created native C# bindings for Android/iOS push notification libraries; built a Wi-Fi PDF printing module.",
                         "Maintained backend features in PHP (Symfony) + MySQL.",
+                    ],
+                    AppLinks:
+                    [
+                        new ("Smartseeds", "https://apps.apple.com/us/app/smartseeds-2-0/id1581400249", "ios"),
+                        new ("Smartseeds", "https://play.google.com/store/apps/details?id=com.smartseeds.cargoowners", "android"),
                     ]
                 ),
             ],
@@ -116,7 +127,7 @@ public class ResumeDataProvider
                 new (
                     Name: "Leaders of Digital",
                     Subtitle: "Federal Hackathon Finals",
-                    Year: "2020 – 2021",
+                    Year: "2020 – 2022",
                     Tags: ["C#", ".NET"],
                     Description: "Multiple federal hackathon finals"
                 ),
