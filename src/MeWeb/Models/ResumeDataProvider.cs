@@ -15,7 +15,7 @@ public class ResumeDataProvider
                 Permit: "EU Work Permit"
             ),
             Summary:
-            "Senior .NET Engineer and Team Lead with 8+ years of experience, having grown from individual contributor to leading a cross-functional mobile team at Artec 3D. Deep technical expertise in C#, .NET iOS/Android, and full-stack development — from native hardware integration and 3D rendering to REST API design, database management, and CI/CD infrastructure. As a team lead, define architectural standards, mentor engineers, own delivery pipelines, and ship under tight deadlines. Regularly build full-stack solutions at hackathons (Blazor WASM, .NET Core, PostgreSQL, Docker), combining hands-on engineering with a product mindset.",
+            "Senior .NET Engineer and Team Lead with 8+ years of experience, having grown from individual contributor to leading a cross-functional mobile team at Artec 3D. Deep technical expertise in C#, .NET iOS/Android, and full-stack development – from native hardware integration and 3D rendering to REST API design, database management, and CI/CD infrastructure. As a team lead, define architectural standards, mentor engineers, own delivery pipelines, and ship under tight deadlines. Regularly build full-stack solutions at hackathons (Blazor WASM, .NET Core, PostgreSQL, Docker), combining hands-on engineering with a product mindset.",
             Skills:
             [
                 new ("Programming Languages", ["C#", "HTML/CSS", "Kotlin/Java", "Swift", "Python"]),
