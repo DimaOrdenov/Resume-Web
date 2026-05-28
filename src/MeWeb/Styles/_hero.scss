@@ -1,0 +1,81 @@
+@use 'variables' as *;
+
+.hero {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(88, 166, 255, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.hero-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.hero-name { margin-bottom: 0.5rem; }
+
+.hero-title {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: $text-secondary;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: $text-secondary;
+  background: $bg-card;
+  border: 1px solid $border;
+  border-radius: 2rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: $text-secondary;
+
+  &:hover { color: $accent; }
+}

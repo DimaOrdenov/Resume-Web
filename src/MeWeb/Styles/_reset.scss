@@ -1,0 +1,129 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-primary;
+  color: $text-primary;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $accent;
+  text-decoration: none;
+  transition: color $transition, opacity $transition;
+
+  &:hover { color: $text-primary; }
+}
+
+ul { list-style: none; }
+
+// ─── Layout helpers ───────────────────────────────────────────────
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section.section {
+  padding: $section-gap 0;
+
+  &.alt-bg { background-color: $bg-secondary; }
+}
+
+.section-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: $border;
+  }
+}
+
+// ─── Typography ───────────────────────────────────────────────────
+h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; }
+h2 { font-size: 1.2rem;  font-weight: 600; }
+h3 { font-size: 1rem;    font-weight: 600; }
+p  { color: $text-secondary; line-height: 1.75; }
+
+// ─── Blazor loading / error UI ────────────────────────────────────
+#blazor-error-ui {
+  background: $bg-secondary;
+  border-top: 1px solid $border;
+  bottom: 0;
+  box-sizing: border-box;
+  color: $text-secondary;
+  display: none;
+  left: 0;
+  padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+  }
+}
+
+.loading-progress {
+  position: absolute;
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  inset: 20vh 0 auto 0;
+  margin: 0 auto;
+
+  circle {
+    fill: none;
+    stroke: $border;
+    stroke-width: 0.6rem;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+
+    &:last-child {
+      stroke: $accent;
+      stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+      transition: stroke-dasharray 0.05s ease-in-out;
+    }
+  }
+}
+
+.loading-progress-text {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+  color: $text-secondary;
+
+  &::after { content: var(--blazor-load-percentage-text, "Loading"); }
+}
+
+// ─── Responsive overrides ─────────────────────────────────────────
+@media (max-width: $bp-tablet) {
+  :root { --section-gap: 3rem; }
+}

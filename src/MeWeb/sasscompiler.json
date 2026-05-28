@@ -1,0 +1,11 @@
+{
+  "Arguments": "--error-css --style=expanded --source-map --silence-deprecation import --silence-deprecation global-builtin",
+  "Source": "Styles",
+  "Target": "wwwroot/css",
+
+  "Configurations": {
+    "Release": {
+      "Arguments": "--no-error-css --style=compressed --no-source-map"
+    }
+  }
+}

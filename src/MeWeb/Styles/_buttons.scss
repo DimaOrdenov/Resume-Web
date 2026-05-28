@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: $radius;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all $transition;
+  border: 1px solid transparent;
+
+  &-primary {
+    background: $accent;
+    color: #0d1117;
+    border-color: $accent;
+
+    &:hover { background: #79b8ff; border-color: #79b8ff; color: #0d1117; }
+  }
+
+  &-outline {
+    background: transparent;
+    color: $text-primary;
+    border-color: $border;
+
+    &:hover { border-color: $accent; color: $accent; }
+  }
+}

@@ -1,0 +1,41 @@
+// ─── CSS custom properties (runtime, for potential theming) ──────
+:root {
+  --bg-primary:    #0d1117;
+  --bg-secondary:  #161b22;
+  --bg-card:       #1c2128;
+  --border:        #30363d;
+  --border-hover:  #484f58;
+  --text-primary:  #e6edf3;
+  --text-secondary:#8b949e;
+  --accent:        #58a6ff;
+  --accent-muted:  rgba(88, 166, 255, 0.12);
+  --accent-border: rgba(88, 166, 255, 0.3);
+  --success:       #3fb950;
+  --warning:       #d29922;
+  --radius:        8px;
+  --radius-lg:     12px;
+  --transition:    0.25s ease;
+  --max-width:     900px;
+  --section-gap:   5rem;
+}
+
+// ─── SCSS aliases (build-time, for use inside partials) ──────────
+$bg-primary:    #0d1117;
+$bg-secondary:  #161b22;
+$bg-card:       #1c2128;
+$border:        #30363d;
+$border-hover:  #484f58;
+$text-primary:  #e6edf3;
+$text-secondary:#8b949e;
+$accent:        #58a6ff;
+$accent-muted:  rgba(88, 166, 255, 0.12);
+$accent-border: rgba(88, 166, 255, 0.3);
+$radius:        8px;
+$radius-lg:     12px;
+$transition:    0.25s ease;
+$max-width:     900px;
+$section-gap:   5rem;
+
+// ─── Breakpoints ─────────────────────────────────────────────────
+$bp-mobile: 640px;
+$bp-tablet: 768px;
