@@ -20,15 +20,35 @@
   }
 }
 
-.hero-eyebrow {
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: $accent;
-  margin-bottom: 0.75rem;
-  font-weight: 500;
+// ─── Two-column layout: text left, photo right ───────────────────
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
 }
 
+.hero-text { flex: 1; min-width: 0; }
+
+// ─── Photo ───────────────────────────────────────────────────────
+.hero-photo { flex-shrink: 0; }
+
+.hero-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid $border;
+  box-shadow: 0 0 0 6px rgba(88, 166, 255, 0.08);
+  transition: border-color $transition, box-shadow $transition;
+
+  &:hover {
+    border-color: $accent;
+    box-shadow: 0 0 0 6px rgba(88, 166, 255, 0.2);
+  }
+}
+
+// ─── Text elements ────────────────────────────────────────────────
 .hero-name { margin-bottom: 0.5rem; }
 
 .hero-title {
@@ -78,4 +98,18 @@
   color: $text-secondary;
 
   &:hover { color: $accent; }
+}
+
+// ─── Responsive ───────────────────────────────────────────────────
+@media (max-width: $bp-tablet) {
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .hero-avatar {
+    width: 120px;
+    height: 120px;
+  }
 }

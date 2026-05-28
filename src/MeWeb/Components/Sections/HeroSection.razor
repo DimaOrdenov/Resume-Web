@@ -2,43 +2,50 @@
 
 <section id="hero" class="section hero">
     <div class="container">
-        <div class="hero-eyebrow hero-animate">Available for new opportunities</div>
-        <h1 class="hero-name hero-animate">@Person.Name</h1>
-        <p class="hero-title hero-animate">@Person.Title</p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-name hero-animate">@Person.Name</h1>
+                <p class="hero-title hero-animate">@Person.Title</p>
 
-        <div class="hero-meta hero-animate">
-            <span class="hero-badge">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C5.24 0 3 2.24 3 5c0 3.75 5 11 5 11s5-7.25 5-11c0-2.76-2.24-5-5-5zm0 7.5C6.62 7.5 5.5 6.38 5.5 5S6.62 2.5 8 2.5 10.5 3.62 10.5 5 9.38 7.5 8 7.5z"/></svg>
-                @Person.Location
-            </span>
-            <span class="hero-badge">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M1.5 14.25c0 .138.112.25.25.25H4v-1.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v1.25h2.25a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25v12.5zM15 14.25V3.75a.25.25 0 0 0-.25-.25H13v10.75c0 .414-.168.79-.44 1.065.106.06.234.096.37.096h1.82a.25.25 0 0 0 .25-.25zM5 4.75A.75.75 0 0 1 5.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 5 4.75zM5.75 8h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 5 8.75.75.75 0 0 1 5.75 8z"/></svg>
-                @Person.Permit
-            </span>
-        </div>
+                <div class="hero-meta hero-animate">
+                    <span class="hero-badge">
+                        <!-- location pin -->
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C5.24 0 3 2.24 3 5c0 3.75 5 11 5 11s5-7.25 5-11c0-2.76-2.24-5-5-5zm0 7.5C6.62 7.5 5.5 6.38 5.5 5S6.62 2.5 8 2.5 10.5 3.62 10.5 5 9.38 7.5 8 7.5z"/></svg>
+                        @Person.Location
+                    </span>
+                    <span class="hero-badge">
+                        <!-- EU permit badge -->
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M1.5 14.25c0 .138.112.25.25.25H4v-1.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v1.25h2.25a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25v12.5zM15 14.25V3.75a.25.25 0 0 0-.25-.25H13v10.75c0 .414-.168.79-.44 1.065.106.06.234.096.37.096h1.82a.25.25 0 0 0 .25-.25zM5 4.75A.75.75 0 0 1 5.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 5 4.75zM5.75 8h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 5 8.75.75.75 0 0 1 5.75 8z"/></svg>
+                        @Person.Permit
+                    </span>
+                </div>
 
-        <div class="hero-actions hero-animate">
-            <a class="btn btn-primary" href="@($"{Person.Name.Replace(" ", "_")}_CV.pdf")" download>
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M7.47 10.78a.75.75 0 0 0 1.06 0l3.75-3.75a.75.75 0 0 0-1.06-1.06L8.75 8.44V1.75a.75.75 0 0 0-1.5 0v6.69L4.78 5.97a.75.75 0 0 0-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5z"/></svg>
-                Download CV
-            </a>
-            <a class="btn btn-outline" href="https://@Person.LinkedIn" target="_blank" rel="noopener">
-                LinkedIn
-            </a>
-            <a class="btn btn-outline" href="https://@Person.GitHub" target="_blank" rel="noopener">
-                GitHub
-            </a>
-        </div>
+                <div class="hero-actions hero-animate">
+                    <a class="btn btn-primary" href="https://@Person.LinkedIn" target="_blank" rel="noopener">
+                        LinkedIn
+                    </a>
+                    <a class="btn btn-outline" href="https://@Person.GitHub" target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                </div>
 
-        <div class="hero-links hero-animate">
-            <a class="hero-link" href="mailto:@Person.Email">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z"/></svg>
-                @Person.Email
-            </a>
-            <span class="hero-link">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M1.5 3.5a2 2 0 0 1 2-2h.055a2 2 0 0 1 1.879 1.31L6.184 5h3.63l.75-2.19A2 2 0 0 1 12.443 1.5h.057a2 2 0 0 1 2 2v.25a2 2 0 0 1-.673 1.508L12.5 6.43V7a6 6 0 0 1-6 6H5a.75.75 0 0 1 0-1.5h1.5A4.5 4.5 0 0 0 11 7v-.43l1.35-1.168A.5.5 0 0 0 12.5 5v-.25a.5.5 0 0 0-.5-.5h-.057a.5.5 0 0 0-.47.328L10.6 7H5.4L4.527 4.578A.5.5 0 0 0 4.055 4.25H4a.5.5 0 0 0-.5.5V5a.5.5 0 0 0 .168.372L5 6.57V7a6 6 0 0 0 .056.8.75.75 0 0 1-1.492.17A7.5 7.5 0 0 1 3.5 7v-.43L2.173 5.508A2 2 0 0 1 1.5 4V3.5Z"/></svg>
-                @Person.Phone
-            </span>
+                <div class="hero-links hero-animate">
+                    <a class="hero-link" href="mailto:@Person.Email">
+                        <!-- envelope -->
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z"/></svg>
+                        @Person.Email
+                    </a>
+                    <span class="hero-link">
+                        <!-- phone handset -->
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                        @Person.Phone
+                    </span>
+                </div>
+            </div>
+
+            <div class="hero-photo hero-animate">
+                <img src="images/photo.jpeg" alt="@Person.Name" class="hero-avatar" />
+            </div>
         </div>
     </div>
 </section>

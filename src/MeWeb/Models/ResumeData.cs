@@ -13,12 +13,15 @@ public record PersonInfo(
 
 public record SkillCategory(string Name, string[] Tags);
 
+public record AppLink(string Label, string Url, string Platform);
+
 public record Experience(
     string Title,
     string Company,
     string Period,
     string Location,
-    string[] Bullets
+    string[] Bullets,
+    AppLink[]? AppLinks = null
 );
 
 public record Hackathon(
@@ -26,7 +29,8 @@ public record Hackathon(
     string Subtitle,
     string Year,
     string[] Tags,
-    string Description
+    string Description,
+    string? GitHubUrl = null
 );
 
 public record Education(string Degree, string School, string Period);

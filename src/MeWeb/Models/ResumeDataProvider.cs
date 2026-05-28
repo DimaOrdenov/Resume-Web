@@ -39,6 +39,13 @@ public class ResumeDataProvider
                         "Own mobile CI/CD infrastructure on Jenkins/Bitbucket; define coding standards and architectural guidelines.",
                         "Shipped the Artec Photogrammetry app for FormNext exhibition within a 1-month deadline; implemented automated Camera API exposure control.",
                         "Led the full migration from Xamarin Native to .NET iOS/Android.",
+                    ],
+                    AppLinks:
+                    [
+                        new ("Artec Remote", "https://apps.apple.com/us/app/artec-remote/id1398067054", "ios"),
+                        new ("Artec Remote", "https://play.google.com/store/apps/details?id=com.artec3d.ArtecRemote&hl=en_US", "android"),
+                        new ("Artec Photogrammetry", "https://apps.apple.com/us/app/artec-photogrammetry/id6751812137", "ios"),
+                        new ("Artec Photogrammetry", "https://play.google.com/store/apps/details?id=com.artec3d.photogrammetry&hl=en_US", "android"),
                     ]
                 ),
                 new (
@@ -87,21 +94,24 @@ public class ResumeDataProvider
                     Subtitle: "Leaders of Change Technology",
                     Year: "2025",
                     Tags: ["Blazor WASM (PWA)", ".NET Core API", "PostgreSQL", "Docker", "nginx"],
-                    Description: "Full-stack gamification platform"
+                    Description: "Full-stack gamification platform",
+                    GitHubUrl: "https://github.com/NoTryCatchTeam/Lct2025"
                 ),
                 new (
                     Name: "NASA Space Apps Challenge",
                     Subtitle: "International Hackathon",
                     Year: "2024",
                     Tags: ["Blazor", "HTML/JS", "three.js"],
-                    Description: "Interactive space data visualization"
+                    Description: "Interactive space data visualization",
+                    GitHubUrl: "https://github.com/NoTryCatchTeam/NasaChallenge2024"
                 ),
                 new (
                     Name: "LCT 2023",
                     Subtitle: "Leaders of Change Technology",
                     Year: "2023",
                     Tags: [".NET iOS/Android", ".NET Core API", "PostgreSQL", "Docker"],
-                    Description: "Art education mobile app"
+                    Description: "Art education mobile app",
+                    GitHubUrl: "https://github.com/NoTryCatchTeam/Lct2023"
                 ),
                 new (
                     Name: "Leaders of Digital",

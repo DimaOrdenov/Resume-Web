@@ -58,3 +58,23 @@
   border-radius: $radius;
   padding: 0.15rem 0.5rem;
 }
+
+// ─── GitHub link ──────────────────────────────────────────────────
+.hackathon-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: $text-secondary;
+  border: 1px solid $border;
+  border-radius: $radius;
+  padding: 0.3rem 0.7rem;
+  transition: color $transition, border-color $transition, background $transition;
+  align-self: flex-start;
+
+  &:hover {
+    color: $text-primary;
+    border-color: $border-hover;
+    background: $bg-secondary;
+  }
+}
