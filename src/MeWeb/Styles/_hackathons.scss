@@ -17,7 +17,7 @@
   transition: border-color $transition, transform $transition;
 
   &:hover {
-    border-color: $accent;
+    border-color: $border-hover;
     transform: translateY(-2px);
   }
 }
@@ -73,8 +73,8 @@
   align-self: flex-start;
 
   &:hover {
-    color: $text-primary;
-    border-color: $border-hover;
+    color: $accent;
+    border-color: $accent-border;
     background: $bg-secondary;
   }
 }
