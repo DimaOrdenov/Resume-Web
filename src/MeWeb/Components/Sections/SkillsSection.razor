@@ -1,0 +1,25 @@
+@using MeWeb.Models
+
+<section id="skills" class="section">
+    <div class="container">
+        <div class="section-title">Skills</div>
+        <div class="skills-grid reveal-stagger">
+            @foreach (var category in Skills)
+            {
+                <div class="skill-card">
+                    <div class="skill-card-name">@category.Name</div>
+                    <div class="skill-tags">
+                        @foreach (var tag in category.Tags)
+                        {
+                            <span class="skill-tag">@tag</span>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+@code {
+    [Parameter, EditorRequired] public SkillCategory[] Skills { get; set; } = default!;
+}

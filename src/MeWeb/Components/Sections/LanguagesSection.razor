@@ -1,0 +1,25 @@
+@using MeWeb.Models
+
+<section id="languages" class="section">
+    <div class="container">
+        <div class="section-title">Languages</div>
+        <div class="languages-list reveal">
+            @foreach (var lang in Languages)
+            {
+                <div class="language-item">
+                    <div class="language-header">
+                        <span class="language-name">@lang.Language</span>
+                        <span class="language-level">@lang.Level</span>
+                    </div>
+                    <div class="language-bar">
+                        <div class="language-bar-fill" style="width: @(lang.Percent)%"></div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+@code {
+    [Parameter, EditorRequired] public LanguageItem[] Languages { get; set; } = default!;
+}

@@ -1,0 +1,12 @@
+@page "/"
+@inject ResumeDataProvider Data
+
+<PageTitle>Dmitrii Ordenov — .NET Developer</PageTitle>
+
+<HeroSection      Person="@Data.Resume.Person" />
+<SummarySection   Summary="@Data.Resume.Summary" />
+<SkillsSection    Skills="@Data.Resume.Skills" />
+<ExperienceSection Experiences="@Data.Resume.Experiences" />
+<HackathonsSection Hackathons="@Data.Resume.Hackathons" />
+<EducationSection  Education="@Data.Resume.Education" />
+<LanguagesSection  Languages="@Data.Resume.Languages" />

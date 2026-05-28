@@ -1,0 +1,28 @@
+@inject IJSRuntime JS
+
+<nav class="navbar">
+    <div class="navbar-inner">
+        <a class="navbar-brand" href="#hero">
+            <span>D</span>O
+        </a>
+        <button class="nav-toggle" @onclick="ToggleMenu" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links @(_menuOpen ? "open" : "")">
+            <a href="#summary"    @onclick="CloseMenu">About</a>
+            <a href="#skills"     @onclick="CloseMenu">Skills</a>
+            <a href="#experience" @onclick="CloseMenu">Experience</a>
+            <a href="#hackathons" @onclick="CloseMenu">Hackathons</a>
+            <a href="#education"  @onclick="CloseMenu">Education</a>
+        </div>
+    </div>
+</nav>
+
+@code {
+    private bool _menuOpen;
+
+    private void ToggleMenu() => _menuOpen = !_menuOpen;
+    private void CloseMenu()  => _menuOpen = false;
+}

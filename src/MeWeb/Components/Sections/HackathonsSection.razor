@@ -1,0 +1,30 @@
+@using MeWeb.Models
+
+<section id="hackathons" class="section">
+    <div class="container">
+        <div class="section-title">Hackathons &amp; Projects</div>
+        <div class="hackathons-grid reveal-stagger">
+            @foreach (var h in Hackathons)
+            {
+                <div class="hackathon-card">
+                    <div class="hackathon-header">
+                        <span class="hackathon-name">@h.Name</span>
+                        <span class="hackathon-year">@h.Year</span>
+                    </div>
+                    <div class="hackathon-subtitle">@h.Subtitle</div>
+                    <div class="hackathon-desc">@h.Description</div>
+                    <div class="hackathon-tags">
+                        @foreach (var tag in h.Tags)
+                        {
+                            <span class="hackathon-tag">@tag</span>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+@code {
+    [Parameter, EditorRequired] public Hackathon[] Hackathons { get; set; } = default!;
+}

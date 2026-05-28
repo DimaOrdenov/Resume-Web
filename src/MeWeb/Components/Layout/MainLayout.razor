@@ -1,0 +1,26 @@
+@inherits LayoutComponentBase
+@inject IJSRuntime JS
+
+<NavMenu />
+
+<main>
+    @Body
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>
+            Built with <a href="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor" target="_blank" rel="noopener">Blazor WASM</a>
+            &nbsp;&middot;&nbsp;
+            <a href="https://github.com/DimaOrdenov" target="_blank" rel="noopener">github.com/DimaOrdenov</a>
+        </p>
+    </div>
+</footer>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            await JS.InvokeVoidAsync("scrollObserver.init");
+    }
+}

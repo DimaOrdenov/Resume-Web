@@ -1,0 +1,18 @@
+@using MeWeb.Models
+
+<section id="education" class="section alt-bg">
+    <div class="container">
+        <div class="section-title">Education</div>
+        <div class="education-card reveal">
+            <div>
+                <div class="education-degree">@Education.Degree</div>
+                <div class="education-school">@Education.School</div>
+            </div>
+            <div class="education-period">@Education.Period</div>
+        </div>
+    </div>
+</section>
+
+@code {
+    [Parameter, EditorRequired] public Education Education { get; set; } = default!;
+}

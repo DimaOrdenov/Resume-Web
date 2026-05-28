@@ -1,0 +1,12 @@
+@using MeWeb.Models
+
+<section id="summary" class="section alt-bg">
+    <div class="container">
+        <div class="section-title">About</div>
+        <p class="summary-text reveal">@Summary</p>
+    </div>
+</section>
+
+@code {
+    [Parameter, EditorRequired] public string Summary { get; set; } = default!;
+}
