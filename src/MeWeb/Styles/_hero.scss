@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .hero {
-  min-height: calc(100vh - 56px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 4rem 0;
