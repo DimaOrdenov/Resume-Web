@@ -21,6 +21,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
+    <!-- Apply saved theme before first paint to avoid flash -->
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme');
+            if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
     <!-- GitHub Pages SPA redirect script -->
     <script>
         (function(l) {

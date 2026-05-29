@@ -32,3 +32,16 @@ window.scrollObserver = {
         sections.forEach(s => navObserver.observe(s));
     }
 };
+
+window.themeToggle = {
+    getTheme: function () {
+        return document.documentElement.getAttribute('data-theme') || 'dark';
+    },
+    toggle: function () {
+        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        return next;
+    }
+};

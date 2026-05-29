@@ -14,10 +14,10 @@
 
   &-primary {
     background: $accent;
-    color: #0d1117;
+    color: $text-on-accent;
     border-color: $accent;
 
-    &:hover { background: #79b8ff; border-color: #79b8ff; color: #0d1117; }
+    &:hover { background: #79b8ff; border-color: #79b8ff; color: $text-on-accent; }
   }
 
   &-outline {

@@ -8,8 +8,9 @@
   z-index: 100;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  background: rgba(13, 17, 23, 0.85);
+  background: var(--navbar-bg);
   border-bottom: 1px solid $border;
+  transition: background $transition, border-color $transition;
 }
 
 .navbar-inner {
@@ -48,6 +49,30 @@
       background: $accent-muted;
     }
   }
+}
+
+// ─── Theme toggle button ──────────────────────────────────────────
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: $radius;
+  background: none;
+  border: 1px solid $border;
+  color: $text-secondary;
+  cursor: pointer;
+  transition: color $transition, border-color $transition, background $transition;
+  flex-shrink: 0;
+
+  &:hover {
+    color: $text-primary;
+    border-color: $border-hover;
+    background: $accent-muted;
+  }
+
+  svg { display: block; }
 }
 
 .nav-toggle {
