@@ -122,6 +122,10 @@
   &--ios {
     color: $text-secondary;
     background: transparent;
+    
+    svg {
+      color: $text-primary;
+    }
 
     &:hover {
       color: $text-primary;
